@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.wrapper-div{
+    width: 900px;
+    margin: auto;
+    text-align: center;
+    border: 2px dotted red;
+    margin-top: 20px;
+}
+.basic-design{
+    height: 150px;
+    width: 150px;
+    background-color: orange;
+    display: inline-block;
+    margin: 20px;
+    transition: .5s;
+}
+.content-div1:hover{
+    transform: translate(20px,50px);
+}
+.content-div2:hover{
+    transform:skew(30deg);
+}
+.content-div3:hover{
+    transform:rotate(360deg) skew(20deg) ;
+}
+.content-div4:hover{
+    transform: scale(1.5);
+}
+/* ===========IMG SECTION CSS START=========== */
+.img-section{
+    width: 90%;
+    margin:50px auto;
+    text-align: center;
+    z-index: -1;
+}
+img{
+    max-width: 100%;
+}
+div[class^=img]{
+    display: inline-block;
+    width: 17%;
+    border: 2px solid red;
+    height: 20%;
+    margin: 10px;
+    position: relative;
+    transition: .5s;
+}
+div[class^=img]::before{
+    content: "";
+    height:0;
+    width: 0;
+    background-color: rgba(255, 0, 0, 0.236);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .6s;
+}
+div[class^=img]::after{
+    content: "";
+    height:0;
+    width: 0;
+    background-color: rgba(255, 0, 0, 0.236);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .6s;
+}
+div[class^=img]:hover::before{
+    width: 50.1%;
+    height: 100%;
+}
+div[class^=img]:hover::after{
+    width: 50.1%;
+    height: 100%;
+}
+div[class^=img]:hover{
+    transform: scale(1.1);
+    transform: translate;
+}
+.img-section .img4 img{
+    height: 185px;
+}
+.img-section .img10 img{
+    height: 185px;
+}
+/* ===========IMG SECTION CSS END=========== */
